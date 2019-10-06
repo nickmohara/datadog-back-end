@@ -2,11 +2,10 @@ import notebook from '../controllers/notebookController';
 
 export default (app) => {
     app.route('/notes')
-        .get(notebook.getAllNotes)
-        .post(notebook.createNote);
+        .get(notebook.test)
+        // .post(notebook.createNote);
 
-    app.route('/notes/:noteId')
-        .get(notebook.getNote)
-        .put(notebook.updateNote)
-        .delete(notebook.deleteNote);
+    app.get("/url", (req, res, next) => {
+     res.json(["Tony","Lisa","Michael","Ginger","Food"]);
+    });
 };

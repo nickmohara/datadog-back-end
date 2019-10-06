@@ -1,5 +1,4 @@
 import express from 'express';
-import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 
 import routes from './routes/index.js';
@@ -7,14 +6,8 @@ import routes from './routes/index.js';
 const app = express();
 
 /**
-    * Connect to the database
-    */
-
-mongoose.connect('mongodb://localhost');
-
-/**
-    * Middleware
-    */
+* Middleware
+*/
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -34,8 +27,8 @@ app.use((err, req, res, next) => {
 });
 
 /**
-    * Register the routes
-    */
+* Register the routes
+*/
 
 routes(app);
 
