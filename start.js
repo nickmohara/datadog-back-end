@@ -5,3 +5,5 @@ require("@babel/register")({
 
 // Import the rest of our application.
 module.exports = require('./server.js')
+
+// To start, run node start.js

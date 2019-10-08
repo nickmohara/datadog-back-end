@@ -2,17 +2,9 @@ import os from 'os';
 
 exports.getUsage = (req, res) => {
     const cpus = os.cpus().length;
-    const loadAverage = os.loadavg()[0] / cpus;
-
-    console.log(cpus);
-    console.log(loadAverage);
-
-    // console.log(os.cpus());
-    // console.log(os.totalmem());
-    // console.log(os.freemem());
-
+    const loadAverage = (os.loadavg()[0] / cpus);
     res.send({
-      timestamp: Math.floor(Date.now() / 1000),
+      timestamp: Date.now(),
       loadAverage: loadAverage
     });
 };
