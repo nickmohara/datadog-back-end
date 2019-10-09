@@ -1,1 +1,1 @@
-To start the react app, run "node start.js".
+To start the backend, run "node start.js".
